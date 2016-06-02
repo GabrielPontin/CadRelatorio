@@ -39,7 +39,7 @@ public class MeuModelo extends AbstractTableModel {				// Classe Abstrata
 	}
 
 	@Override
-	public Object getValueAt(int rowIndex, int columnIndex) {
+	public Object getValueAt(int rowIndex, int columnIndex) {     		 // Jtable chama esse Metodo 
 
 		Pessoa p = lista.get(rowIndex);
 
@@ -51,7 +51,7 @@ public class MeuModelo extends AbstractTableModel {				// Classe Abstrata
 		case 2:
 			return p.getTelefone();
 		default:
-			return "erro";
+			return "Erro";
 		}
 	}
 }
