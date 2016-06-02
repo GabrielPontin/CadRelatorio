@@ -43,16 +43,24 @@ public class TelaPrincipal extends JFrame {
 		JButton button = new JButton("Carregar");							// Instancia um Botao
 		jp.add(button, BorderLayout.NORTH);									// Cria um Botao no Topo
 
+		JButton button2 = new JButton("Imprimir");							// Instancia um Botao
+		jp.add(button2, BorderLayout.SOUTH);								// Cria um Botao na parte de baixo
+		
 		this.setContentPane(jp);											
-
+		
 		button.addActionListener(new ActionListener() {						// Passando uma Classe Anonima 
-
 			@Override
 			public void actionPerformed(ActionEvent e) {      				// Chama o metodo Carregar
 				carregar();													// 			<-----
 			}
 		});
-
+		
+		button2.addActionListener(new ActionListener() {					
+			@Override
+			public void actionPerformed(ActionEvent e) {      				
+				System.out.println("Aguarde a Impressâo");											
+			}
+		});
 	}
 
 
